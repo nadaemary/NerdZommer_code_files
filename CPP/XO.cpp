@@ -36,7 +36,7 @@ bool isWin(int mark) {                             // is mark the winner
 void getWinner() {
   if (isWin(X)) cout<<"Player X won"<< endl;
   else if (isWin(O)) cout<<"Player O won"<< endl;
-  else return cout<<"Tie"<< endl;
+  else cout<<"Tie"<< endl;
 }
 
 void printBoard() {
@@ -51,18 +51,20 @@ void printBoard() {
     }
     if (i < 2) cout<< "\n-+-+-\n";
   }
+  cout<<endl;
 }
 
 int main() {
   clearBoard();
-  putMark(0,0);
-  putMark(1,1);
-  putMark(0,1);
-  putMark(0,2);
-  putMark(2,0);
-  putMark(1,2);
-  putMark(2,2);
-  putMark(2,1);
-  putMark(1,0);
+  inputMark(0,0);
+  inputMark(1,1);
+  inputMark(0,1);
+  inputMark(0,2);
+  inputMark(2,0);
+  inputMark(1,2);
+  inputMark(2,2);
+  inputMark(2,1);
+  inputMark(1,0);
   printBoard();
   getWinner();
+}
